@@ -1,0 +1,195 @@
+.bg-dark-new{
+    background-color: #4A2E62;
+}
+.bg-dark-new-footer{
+    width: 100%;
+}
+.bg-dark-new a{
+    color: #FFFFFF;
+}
+html { font-family: 'Roboto', sans-serif; }
+div,#root .row{
+    margin: 0;
+    padding: 0;
+}
+._left{
+    float: left;
+}
+._right{
+    float: right;
+}
+body{
+    background: #EFEFF7 0% 0% no-repeat padding-box!important;
+    width: 1260px;
+    margin: 0 auto!important;
+}
+#root{
+    top: 0px;
+    left: 0px;
+    width: 1260px;
+    min-height: 990px;
+    
+    opacity: 1;
+}
+.heroImage{
+    height: 450px;
+    width: 100%;
+    max-width: 1200px;
+    background: transparent linear-gradient(202deg, #30194B00 0%, #30194BCC 61%, #30194B 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 5px 5px;
+    opacity: 1;
+}
+#root .card.heroImageCard{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    top: 150px;
+    left: 100px;
+}
+#root .heroImageCard .card-title{
+    top: 141px;
+    left: 183px;
+    width: 262px;
+    height: 39px;
+    text-align: left;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+#root .heroImageCard .card-subtitle {
+    top: 188px;
+    left: 183px;
+    width: 300px;
+    height: 71px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #D1C2E1;
+    opacity: 1;
+}
+.button{
+    margin: 10px 0;
+    width: 300px;
+    height: 40px;
+    background: #00799E 0% 0% no-repeat padding-box;
+    border-radius: 90px;
+    opacity: 1;
+}
+.button.login{
+    background-color: #00799E;
+    border-radius: 90px;
+}
+.button.createWic{
+    background-color: #4A2E62;
+    border-radius: 90px;
+}
+.button.startApp{
+    background-color: #6B5A76;
+    border-radius: 90px;
+}
+#root .card-body{
+    padding: 0;
+}
+.commonCardTitle{
+    min-width: 20px;
+    min-height: 19px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #4A2E62;
+    opacity: 1;
+}
+.commonCardSubTitle{
+    min-width: 250px;
+    min-height: 53px;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.commonCardLearnMore{
+    min-width: 71px;
+    min-height: 19px;
+    text-align: left;
+    position: relative;
+    top: 15px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #307782;
+}
+.gridWrapper{
+    width: 100%;
+    margin-top: 11px;
+}
+.eachGrid{
+    width: 32%;
+    float: left;
+    height: 180px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 2px #0000001A;
+    border-radius: 5px;
+    opacity: 1;
+    
+}
+.separatorEachGrid{
+    width: 2%;
+    float: left;
+    border: #EFEFF7 solid;
+}
+.commonImageLogo{
+    top: 60px;
+    left: 5px;
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+.gridWrapper .card,.gridWrapperTestimonial .card{
+    border: none;
+    top: 30px;
+}
+.card h5, .card .h5{
+    font-size: 16px;
+}
+.card h6, .card .h6{
+    font-size: 13px;
+}
+.gridWrapperTestimonial .eachGrid{
+    width: 49%;
+    margin-top: 10px;
+}
+.gridWrapperTestimonial .commonCardTitle{
+    min-width: 74px;
+    min-height: 19px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #D09AAB;
+    opacity: 1;
+}
+.copyRight{
+    float: right;
+    min-width: 210px;
+    min-height: 16px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #757575;
+    opacity: 1;
+}
+.privacyPolicy{
+    min-width: 111px;
+    min-height: 16px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #4A2E62;
+    margin : 0 auto;
+}
+.heroImage .img-fluid{
+    height: 100%;
+    width: 100%;
+}
