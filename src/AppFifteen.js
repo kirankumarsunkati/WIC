@@ -3,10 +3,10 @@ import './App.css';
 import './custom.css';
 import React from 'react';
 import logo from './logo.svg';
-import image from './download.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar,Nav,Row,Col,Image,Card,Button,Form} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
+import FamilyMember from './FamilyMembers/FamilyMember';
 
 class AppFifteen extends React.Component{
   render(){
@@ -53,22 +53,14 @@ class AppFifteen extends React.Component{
         <Card.Title className={""}>Great! Based on what you checked this is your initial family list.</Card.Title>
         <Card.Subtitle className={"commonCardSubTitle"}>This is the list of members who are applying for WIC benefits or who will oversee the use of benefits for other members of the family.</Card.Subtitle>
         <Row>
-          <Col xl={6}><Card.Title className={""}>Members</Card.Title></Col>
-          <Col xl={6}><Card.Title className={""}>New Members</Card.Title></Col>
+          <Col xl={6}><Card.Title className={"_left"}>Members</Card.Title></Col>
+          <Col xl={5}><Card.Title className={"_right"}>New Members</Card.Title></Col>
+          <Col xl={1}></Col>
         </Row>
-       <Row>
-         <Col xl={1}>
-         <Image src={image} className={""}  width='25' height='25' roundedCircle />
-         </Col>
-         <Col xl={9}>
-         <Card>
-        <Card.Title className={""}>New Head of HouseHold</Card.Title>
-        <Card.Subtitle className={"commonCardSubTitle"}>Parent/Guardian</Card.Subtitle>
-        </Card>
-         </Col>
-         <Col xl={2}><a>Begin</a></Col>
-       </Row>
-       
+       <FamilyMember/>
+       <FamilyMember/>
+       <FamilyMember/>
+       <FamilyMember/>
       </Card>
       </Col>
       <Col xl={3}>

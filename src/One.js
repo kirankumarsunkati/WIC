@@ -30,7 +30,7 @@ class One extends React.Component{
         </Nav>
       </Navbar>
       <Row>
-        <Col md={12} className={"heroImage"}>
+        <Col md={12} className={"heroImage _p0"}>
           <Image src={Logoo}  fluid width={"100%"} maxHeight={"100%"}/>
         </Col>
         <Card className="heroImageCard">
