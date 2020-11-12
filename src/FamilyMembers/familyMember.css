@@ -1,0 +1,31 @@
+.familyMembersWrapper .familyMemberIcon{
+    background: #D7D7E1 0% 0% no-repeat padding-box;
+    
+}
+.familyMembersWrapper .familyMemberIconWrapper{
+    padding: 0 0 0 20px;
+}
+.commonFont{
+    font-size: 18px;
+}
+.commonFont.name{
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size: medium;
+}
+.commonFont.role{
+    letter-spacing: 0px;
+    color: #81629D;
+    opacity: 1;
+}
+.commonFont.begin{
+    letter-spacing: 0px;
+    color: #00799E;
+    opacity: 1;
+    font-size: medium;
+    font-weight: 600;
+}
+.familyMembersWrapper .card{
+    border: none;
+}
