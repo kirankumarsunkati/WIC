@@ -3,7 +3,7 @@ import './App.css';
 import './custom.css';
 import React from 'react';
 import logo from './logo.svg';
-import Logoo from './photo-1579546929518-9e396f3cc809.jpg';
+import Logoo from './landing_background.png';
 import image from './download.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar,Nav,Row,Col,Image,Card,Button} from 'react-bootstrap';
