@@ -17,12 +17,15 @@ class AppFifteen extends React.Component{
     super(props);
     this.state = {flag: false};
   }
-  handleClose (){
+  handleClose = () => {
     this.setState({
       flag: !this.state.flag
     });
  }
- handleShow (){
+ ex = () => {
+   console.log('ex', this);
+ }
+ handleShow = () => {
    console.log('handle show')
    this.setState({
     flag: !this.state.flag
@@ -85,16 +88,16 @@ class AppFifteen extends React.Component{
       </Card>
       </Col>
       <Col xl={7} className={"_rootp0m0"}>
-      <Modal show={this.state.flag} onHide={this.handleClose.bind(this)}>
+      <Modal show={this.state.flag} onHide={this.handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.handleClose.bind(this)}>
+          <Button variant="secondary" onClick={this.handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={this.handleClose.bind(this)}>
+          <Button variant="primary" onClick={this.handleClose}>
             Save Changes
           </Button>
         </Modal.Footer>
@@ -105,7 +108,7 @@ class AppFifteen extends React.Component{
         up to the age of 5 years. Please select the statement(s) below that are true for you</Card.Subtitle>
         <Row className={"membersNewMembersWrapper"}>
           <Col xl={6} className={"_p0"}><Card.Title className={"_left members"}>Members</Card.Title></Col>
-          <Col xl={6} className={"_p0"}><Card.Title className={"_right newMember"} onClick={this.handleShow.bind(this)}><span className={"plusIcon"}>+</span> New Members</Card.Title></Col>
+          <Col xl={6} className={"_p0"}><Card.Title className={"_right newMember"} onClick={this.handleShow}><span className={"plusIcon"}>+</span> New Members</Card.Title></Col>
         </Row>
        <FamilyMember/>
        <FamilyMember/>

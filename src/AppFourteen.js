@@ -11,6 +11,26 @@ import {Navbar,Nav,Row,Col,Card,Button,Form,Dropdown,ButtonGroup,DropdownButton}
 import Carousel from 'react-bootstrap/Carousel'
 
 class AppFourteen extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {childrenSelect: false};
+  }
+  toggleSelect = () => {
+    console.log('toggleSelect');
+    this.setState({childrenSelect: !this.state.childrenSelect})
+  }
+  renderSelect = () => {
+    return this.state.childrenSelect == true ? <div>
+    <Card.Subtitle className={"commonCardSubTitle_ noBorder active"}>How many children would you like to add?
+    </Card.Subtitle>
+    
+    <select className={"_left"}>
+      <option value={2}>2</option>
+      <option value={3}>3</option>
+      <option value={4}>4</option>
+    </select>
+    </div> : " "
+  }
   render(){
     return (
       <div className="App familyMembersWrapper">
@@ -80,23 +100,11 @@ class AppFourteen extends React.Component{
         <Card.Subtitle className={"commonCardSubTitleCheckbox _left"}><Form.Check 
         type={"checkbox"}
         id={"radio"}
+        onClick={this.toggleSelect}
         label={"There is a child in the home between 1 and 5"}
         />
-        <Card.Subtitle className={"commonCardSubTitle_ noBorder active"}>How many children would you like to add?
-        </Card.Subtitle>
-        <DropdownButton
-        as={ButtonGroup}
-        key={"down"}
-        id={`dropdown-button-drop-bottom`}
-        drop={"bottom"}
-        variant="secondary"
-        title={`Select Childrens`}
-        className={'_left'}
-      >
-        <Dropdown.Item eventKey="2">2</Dropdown.Item>
-        <Dropdown.Item eventKey="3">3</Dropdown.Item>
-        <Dropdown.Item eventKey="4">4</Dropdown.Item>
-        </DropdownButton>
+        {this.renderSelect()}
+        
         </Card.Subtitle>
         <Card.Subtitle className={"commonCardSubTitleCheckbox _left"}><Form.Check 
         type={"checkbox"}
