@@ -1,14 +1,12 @@
 import './App.css';
-
 import './custom.css';
 import React from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import fotterLogo from './images/footer_logo.svg';
 import myWic from './images/myWic.svg';
 import banner1 from './images/banner1.png';
 import callCenterLogo from './images/call_center.png';
-import {Navbar,Nav,Row,Col,Image,Card,Button,Form} from 'react-bootstrap';
+import {Navbar,Nav,Row,Col,Card,Button} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
 import FamilyMember from './FamilyMembers/FamilyMember';
 

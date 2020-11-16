@@ -5,7 +5,9 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import image from './../download.svg';
 import './familyMember.css';
-
+import {
+    Link
+  } from "react-router-dom";
 class FamilyMember extends React.Component{
     render(){
         return(
@@ -20,7 +22,7 @@ class FamilyMember extends React.Component{
                     <Card.Subtitle className={"commonCardSubTitle _tleft commonFont role"}>Parent/Guardian</Card.Subtitle>
                     </Card>
                     </Col>
-                    <Col xl={3} className={"commonFont begin _tright"}><a>Begin</a></Col>
+                    <Col xl={3} className={"commonFont begin _tright"}><Link to={"#"}>Begin</Link></Col>
                 </Row>
             </div>
         )

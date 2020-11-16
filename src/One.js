@@ -2,9 +2,6 @@ import './App.css';
 
 import './custom.css';
 import React from 'react';
-import logo from './logo.svg';
-import HeroImage from './images/HeroImage.png';
-import image from './download.svg';
 import myWic from './images/myWic.svg';
 import mobileIcon from './images/mobile_icon.svg';
 import rocketIcon from './images/rocket_icon.svg';
@@ -24,7 +21,7 @@ class One extends React.Component{
         width="60"
         height="30"
         className="d-inline-block align-top"
-        alt="React Bootstrap logo"
+        alt=""
       /></Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#about">About</Nav.Link>
@@ -65,6 +62,7 @@ class One extends React.Component{
               width="31"
               height="59"
               className="d-inline-block align-center commonImageLogo"
+              alt=""
             />
             </Col>
             <Col xl={9}>
@@ -86,6 +84,7 @@ class One extends React.Component{
               width="44"
               height="36"
               className="d-inline-block align-center commonImageLogo"
+              alt=""
             />
             </Col>
             <Col xl={9}>
@@ -105,6 +104,7 @@ class One extends React.Component{
               width="43"
               height="43"
               className="d-inline-block align-center commonImageLogo"
+              alt=""
             />
             </Col>
             <Col xl={9}>
