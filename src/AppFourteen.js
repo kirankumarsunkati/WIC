@@ -4,18 +4,21 @@ import './custom.css';
 import React from 'react';
 import logo from './logo.svg';
 import image from './download.svg';
+import banner1 from './images/banner1.png';
+import myWic from './images/myWic.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import fotterLogo from './images/footer_logo.svg';
 import {Navbar,Nav,Row,Col,Image,Card,Button,Form} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
 
 class AppFourteen extends React.Component{
   render(){
     return (
-      <div className="App">
+      <div className="App familyMembersWrapper">
       <Navbar bg="dark-new" variant="dark-new">
         <Navbar.Brand href="#home"><img
-        src={logo}
-        width="30"
+        src={myWic}
+        width="60"
         height="30"
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
@@ -28,7 +31,7 @@ class AppFourteen extends React.Component{
         </Nav>
       </Navbar>
       <Row>
-      <Col xl={3} className={"leftPanel _p0"}>
+      <Col xl={3} className={"leftPanel _p0 _rootp0m0"}>
       <Card bsPrefix="leftNavWrapper">
         <Card.Title className={"leftTitleMain"}>Welcome to WIC! </Card.Title>
         <Card.Subtitle className={"commonCardSubTitle letsStarted"}>Let's get started.</Card.Subtitle>
@@ -38,7 +41,7 @@ class AppFourteen extends React.Component{
       <Card.Subtitle className={"commonCardSubTitle_"}>Scheduling your appointment</Card.Subtitle>
       </Card>
       </Col>
-      <Col xl={7} className={"middlePanel _p0 _m0"}>
+      <Col xl={7} className={"middlePanel _p0 _m0 _rootp0m0"}>
       <Card bsPrefix="middleNavWrapper">
         <Card.Title className={"titleMain"}>We'll start by determining which members need to be added to the family.</Card.Title>
         <Card.Subtitle className={"commonCardSubTitle_ _p0 _m0"}>WIC benefits are for pregnent and postpartum mothers and children
@@ -69,13 +72,14 @@ class AppFourteen extends React.Component{
       </Row>
       </div>
       </Col>
-      <Col xl={2} className={"rightPanel _p0"}>
+      <Col xl={2} className={"rightPanel _p0 _rootp0m0"}>
       <Carousel>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=First slide&bg=373940"
+      src={banner1}
       alt="First slide"
+      height={600}
     />
     <Carousel.Caption>
       <h3>First slide label</h3>
@@ -85,8 +89,9 @@ class AppFourteen extends React.Component{
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Second slide&bg=282c34"
+      src={banner1}
       alt="Third slide"
+      height={600}
     />
 
     <Carousel.Caption>
@@ -97,8 +102,9 @@ class AppFourteen extends React.Component{
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Third slide&bg=20232a"
+      src={banner1}
       alt="Third slide"
+      height={600}
     />
 
     <Carousel.Caption>
@@ -113,9 +119,9 @@ class AppFourteen extends React.Component{
       <Navbar bg="dark-new-footer" variant="dark-new">
       <Col xl={2}>
         <Navbar.Brand href="#home" className={"_left"}><img
-        src={logo}
-        width="50"
-        height="50"
+        src={fotterLogo}
+        width="120"
+        height="30"
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
       /></Navbar.Brand>

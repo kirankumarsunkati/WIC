@@ -3,8 +3,14 @@ import './App.css';
 import './custom.css';
 import React from 'react';
 import logo from './logo.svg';
-import Logoo from './photo-1579546929518-9e396f3cc809.jpg';
+import HeroImage from './images/HeroImage.png';
 import image from './download.svg';
+import myWic from './images/myWic.svg';
+import mobileIcon from './images/mobile_icon.svg';
+import rocketIcon from './images/rocket_icon.svg';
+import appIcon from './images/app_icon.svg';
+import testimonialIcon from './images/testimonial@2x.png';
+import fotterLogo from './images/footer_logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar,Nav,Row,Col,Image,Card,Button} from 'react-bootstrap';
 
@@ -14,8 +20,8 @@ class One extends React.Component{
             <div className="App">
       <Navbar bg="dark-new" variant="dark-new">
         <Navbar.Brand href="#home"><img
-        src={logo}
-        width="30"
+        src={myWic}
+        width="60"
         height="30"
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
@@ -31,7 +37,7 @@ class One extends React.Component{
       </Navbar>
       <Row>
         <Col md={12} className={"heroImage _p0"}>
-          <Image src={Logoo}  fluid width={"100%"} maxHeight={"100%"}/>
+          <Image className={"HeroImg"}  fluid width={"100%"} maxHeight={"100%"}/>
         </Col>
         <Card className="heroImageCard">
           <Card.Title>Welcome to myWIC</Card.Title>
@@ -55,9 +61,9 @@ class One extends React.Component{
             <Row>
             <Col xl={3}>
               <img
-              src={logo}
-              width="30"
-              height="30"
+              src={mobileIcon}
+              width="31"
+              height="59"
               className="d-inline-block align-center commonImageLogo"
             />
             </Col>
@@ -76,9 +82,9 @@ class One extends React.Component{
             <Row>
             <Col xl={3}>
               <img
-              src={logo}
-              width="30"
-              height="30"
+              src={appIcon}
+              width="44"
+              height="36"
               className="d-inline-block align-center commonImageLogo"
             />
             </Col>
@@ -95,9 +101,9 @@ class One extends React.Component{
             <Row>
             <Col xl={3}>
               <img
-              src={logo}
-              width="30"
-              height="30"
+              src={rocketIcon}
+              width="43"
+              height="43"
               className="d-inline-block align-center commonImageLogo"
             />
             </Col>
@@ -116,7 +122,7 @@ class One extends React.Component{
             <div className="eachGrid">
             <Row>
             <Col xl={3}>
-            <Image src={image} className={"commonImageLogo"} roundedCircle />
+            <Image src={testimonialIcon} className={"commonImageLogo"} roundedCircle />
             </Col>
             <Col xl={9}>
             <Card>
@@ -130,7 +136,7 @@ class One extends React.Component{
             <div className="eachGrid">
             <Row>
             <Col xl={3}>
-            <Image src={image} className={"commonImageLogo"} roundedCircle />
+            <Image src={testimonialIcon} className={"commonImageLogo"} roundedCircle />
             </Col>
             <Col xl={9}>
             <Card>
@@ -146,9 +152,9 @@ class One extends React.Component{
       <Navbar bg="dark-new-footer" variant="dark-new">
       <Col xl={2}>
         <Navbar.Brand href="#home" className={"_left"}><img
-        src={logo}
-        width="50"
-        height="50"
+        src={fotterLogo}
+        width="120"
+        height="30"
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
       /></Navbar.Brand>
