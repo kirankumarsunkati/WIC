@@ -109,6 +109,7 @@ body{
 .button.login{
     background-color: #00799E;
     border-radius: 90px;
+    line-height: 26px;
 }
 .button.createWic{
     background-color: #4A2E62;

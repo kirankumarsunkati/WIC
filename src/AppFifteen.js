@@ -6,12 +6,30 @@ import fotterLogo from './images/footer_logo.svg';
 import myWic from './images/myWic.svg';
 import banner1 from './images/banner1.png';
 import callCenterLogo from './images/call_center.png';
-import {Navbar,Nav,Row,Col,Card,Button} from 'react-bootstrap';
+import {Navbar,Nav,Row,Col,Card,Button,Modal} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
 import FamilyMember from './FamilyMembers/FamilyMember';
 
+
+
 class AppFifteen extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {flag: false};
+  }
+  handleClose (){
+    this.setState({
+      flag: !this.state.flag
+    });
+ }
+ handleShow (){
+   console.log('handle show')
+   this.setState({
+    flag: !this.state.flag
+  });
+ }
   render(){
+    console.log(this.state);
     return (
       <div className="App familyAdditionWrapper">
       <Navbar bg="dark-new" variant="dark-new">
@@ -67,13 +85,27 @@ class AppFifteen extends React.Component{
       </Card>
       </Col>
       <Col xl={7} className={"_rootp0m0"}>
+      <Modal show={this.state.flag} onHide={this.handleClose.bind(this)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.handleClose.bind(this)}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={this.handleClose.bind(this)}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <Card bsPrefix="middleNavWrapper">
         <Card.Title className={"titleMain"}>We'll start by determining which members need to be added to the family.</Card.Title>
         <Card.Subtitle className={"commonCardSubTitle_ _p0 _m0"}>WIC benefits are for pregnent and postpartum mothers and children
         up to the age of 5 years. Please select the statement(s) below that are true for you</Card.Subtitle>
         <Row className={"membersNewMembersWrapper"}>
           <Col xl={6} className={"_p0"}><Card.Title className={"_left members"}>Members</Card.Title></Col>
-          <Col xl={6} className={"_p0"}><Card.Title className={"_right newMember"}><span className={"plusIcon"}>+</span> New Members</Card.Title></Col>
+          <Col xl={6} className={"_p0"}><Card.Title className={"_right newMember"} onClick={this.handleShow.bind(this)}><span className={"plusIcon"}>+</span> New Members</Card.Title></Col>
         </Row>
        <FamilyMember/>
        <FamilyMember/>
