@@ -5,10 +5,11 @@ import React from 'react';
 import logo from './logo.svg';
 import image from './download.svg';
 import banner1 from './images/banner1.png';
+import callCenterLogo from './images/call_center.png';
 import myWic from './images/myWic.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import fotterLogo from './images/footer_logo.svg';
-import {Navbar,Nav,Row,Col,Image,Card,Button,Form} from 'react-bootstrap';
+import {Navbar,Nav,Row,Col,Image,Card,Button,Form,Dropdown,ButtonGroup,DropdownButton} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
 
 class AppFourteen extends React.Component{
@@ -35,10 +36,27 @@ class AppFourteen extends React.Component{
       <Card bsPrefix="leftNavWrapper">
         <Card.Title className={"leftTitleMain"}>Welcome to WIC! </Card.Title>
         <Card.Subtitle className={"commonCardSubTitle letsStarted"}>Let's get started.</Card.Subtitle>
-        <Card.Subtitle className={"commonCardSubTitle_"}>Family questionnaire
+        <Card.Subtitle className={"commonCardSubTitle_ active"}>Family questionnaire
         </Card.Subtitle>
       <Card.Subtitle className={"commonCardSubTitle_"}>Family members list</Card.Subtitle>
       <Card.Subtitle className={"commonCardSubTitle_"}>Scheduling your appointment</Card.Subtitle>
+            <Card bsPrefix="callCenterWrapper card">
+            <Row>
+            <Col xl={3}><img
+                  src={callCenterLogo}
+                  width="60"
+                  height="30"
+                  className="d-inline-block align-top callCenterImg"
+                  alt="React Bootstrap logo"
+                />
+            </Col>
+            <Col xl={9}>
+            <Card.Title className={"callCenterWrapperlineOne"}>Need help?</Card.Title>
+            <Card.Subtitle className={"callCenterWrapperlineTwo"}>Give us a call at</Card.Subtitle>
+            <Card.Subtitle className={"callCenterWrapperlineThree"}>1-800-222-3456</Card.Subtitle>
+            </Col>
+            </Row>
+            </Card>
       </Card>
       </Col>
       <Col xl={7} className={"middlePanel _p0 _m0 _rootp0m0"}>
@@ -61,19 +79,44 @@ class AppFourteen extends React.Component{
         id={"radio"}
         label={"Myself or a member in the home is pregnent."}
         /></Card.Subtitle>
-        
+        <Card.Subtitle className={"commonCardSubTitleCheckbox _left"}><Form.Check 
+        type={"checkbox"}
+        id={"radio"}
+        label={"There is a child in the home between 1 and 5"}
+        />
+        <Card.Subtitle className={"commonCardSubTitle_ noBorder active"}>How many children would you like to add?
+        </Card.Subtitle>
+        <DropdownButton
+        as={ButtonGroup}
+        key={"down"}
+        id={`dropdown-button-drop-bottom`}
+        drop={"bottom"}
+        variant="secondary"
+        title={`Select Childrens`}
+        className={'_left'}
+      >
+        <Dropdown.Item eventKey="2">2</Dropdown.Item>
+        <Dropdown.Item eventKey="3">3</Dropdown.Item>
+        <Dropdown.Item eventKey="4">4</Dropdown.Item>
+        </DropdownButton>
+        </Card.Subtitle>
+        <Card.Subtitle className={"commonCardSubTitleCheckbox _left"}><Form.Check 
+        type={"checkbox"}
+        id={"radio"}
+        label={"I am a foster parent or legal guardian of a child less than 5 years old."}
+        /></Card.Subtitle>
       </Card>
       <div className="continueWrapper">
         <Row xl={12}>
         <Col xl={6}></Col>
         <Col xl={6} className={"_tright"}>
-          <Button size="sm" href="login" className={"button continue login"}>Continue</Button>
+          <Button size="sm" href="15" className={"button continue login"}>Continue</Button>
         </Col>
       </Row>
       </div>
       </Col>
       <Col xl={2} className={"rightPanel _p0 _rootp0m0"}>
-      <Carousel>
+      <Carousel controls={false} indicators={false}>
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -84,32 +127,6 @@ class AppFourteen extends React.Component{
     <Carousel.Caption>
       <h3>First slide label</h3>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={banner1}
-      alt="Third slide"
-      height={600}
-    />
-
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={banner1}
-      alt="Third slide"
-      height={600}
-    />
-
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
