@@ -280,10 +280,15 @@ body{
     position: relative;
     padding: 10px 0;
 }
-.commonCardSubTitle_.active
+.commonCardSubTitle_.active,.nestedNav .nav-link.active
 {
     color: #000000;
 
+}
+.nestedNav .nav-link.active
+{
+    border-bottom: 3px solid #DF8665;
+    border-radius: 0;
 }
 .commonCardSubTitle_.selected{
     color: #00799E;
@@ -302,7 +307,7 @@ body{
 }
 .middleNavWrapper .titleMain{
     min-width: 639px;
-    min-height: 55px;
+    min-height: 26px;
     text-align: left;
     font-size:22px;
     line-height:26px;
@@ -311,13 +316,14 @@ body{
     color: #00799E;
     opacity: 1;
 }
-.middleNavWrapper .commonCardSubTitle_.card-subtitle{
+.middleNavWrapper .commonCardSubTitle_.card-subtitle,.nestedNav{
     top:0;
     left: 0;
     border-bottom: 1px solid #0000001A;
     padding: 0 0 20px 0;
+    border-radius:0;
 }
-.middleNavWrapper .commonCardSubTitle_.card-subtitle.noBorder{
+.middleNavWrapper .commonCardSubTitle_.card-subtitle.noBorder,.noBorder{
     border: none;
     padding: 15px 0 15px 20px;
 }
@@ -365,6 +371,9 @@ opacity: 1;
 }
 .continuetoScheduling{
     width: 200px;
+}
+.save{
+    width: 100px;
 }
 .continueWrapper{
     clear: both;
@@ -464,4 +473,89 @@ opacity: 1;
     border-radius: 0px 0px 0px 5px;
     opacity: 1;
     height: 600px;
+}
+.parentGuardian{
+    top: 119px;
+    left: 363px;
+    min-width: 56px;
+    min-height: 24px;
+    text-align: left;
+    font-size:18px;
+    line-height:18px;
+    letter-spacing: 0px;
+    color: #30194B;
+    opacity: 1;
+}
+.middleNavWrapper.familyMembersListTabs .commonCardSubTitle_.card-subtitle.noBorder{
+    border: none;
+    padding:0;
+}
+.middleNavWrapper.nestedNav{
+    box-shadow: none;
+    min-height: 40px;
+    margin: 5px 0 5px 0;
+    padding: 0 0 5px 0;
+    height: auto;
+}
+.f400{
+    font-weight: 400!important;
+}
+.borderBottom{
+    border-bottom:1px solid #0000001A;
+}
+.FDPIR.borderBottom{
+    padding: 15px 0 30px 0;
+}
+.medicalID{
+    margin: 10px 0 0 30px
+}
+.formRadio{
+    display:inline-block;
+    width: 100px;
+    float:left;
+    padding: 10px 0;
+}
+.familyMembersListTabs .commonCardSubTitleCheckbox._left._tleft{
+    margin: 0 0 5px 30px;
+}
+.clearBoth{
+    clear:both;
+}
+#root .familyMembersListTabs .btn-light{
+    top: 455px;
+    left: 394px;
+    min-width: 130px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E5E2E9;
+    border-radius: 90px;
+    opacity: 1;
+    font-size:14px;
+    line-height:18px;
+    font-weight:500;
+    letter-spacing: 0px;
+    color: #00799E;
+    margin:20px 0 0 30px;
+}
+.imageName,.RemoveLink{
+    width: 184px;
+    height: 20px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #757575;
+    opacity: 1;
+    position: relative;
+    left: 25px;
+    top: 20px;
+}
+.RemoveLink{
+    color: #229FB8;
+}
+.familyAdditionWrapper .leftNavWrapper{
+    height:800px;
+}
+.familyAdditionWrapper .middleNavWrapper.familyMembersListTabs{
+    height:800px;
 }

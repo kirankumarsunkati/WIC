@@ -82,7 +82,8 @@ class AppFourteen extends React.Component{
         <Card.Title className={"titleMain"}>We'll start by determining which members need to be added to the family.</Card.Title>
         <Card.Subtitle className={"commonCardSubTitle_ _p0 _m0"}>WIC benefits are for pregnent and postpartum mothers and children
         up to the age of 5 years. Please select the statement(s) below that are true for you</Card.Subtitle>
-        <Card.Subtitle className={"commonCardSubTitleCheckbox _left"}><Form.Check 
+        <Card.Subtitle className={"commonCardSubTitleCheckbox _left"}>
+        <Form.Check 
         type={"checkbox"}
         id={"radio"}
         label={"Myself or a member in the home is pregnent."}
