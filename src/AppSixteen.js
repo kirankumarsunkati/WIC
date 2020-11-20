@@ -19,12 +19,18 @@ import {
 class AppSixteen extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {flag: false};
+    this.state = {medicaFlag: false,radioYes:false};
+  }
+  toggleMedicaOptions = () => {
+    this.setState({medicaFlag:!this.state.medicaFlag});
   }
   handleClose = () => {
     this.setState({
       flag: !this.state.flag
     });
+  }
+  toggleRadio = (_name,event) => {
+    this.setState({radioYes: _name === "radioYes" ? true : false})
  }
  ex = () => {
    console.log('ex', this);
@@ -127,8 +133,10 @@ class AppSixteen extends React.Component{
         <Form.Check 
         type={"checkbox"}
         id={"radio"}
+        onClick={this.toggleMedicaOptions}
         label={"Medicaid"}
         /></Card.Subtitle>
+        {this.state.medicaFlag && <div className="meidcalToggleWrapper">
         <Card.Subtitle className={"commonCardSubTitleCheckbox _left"}>
         Account number
         <Form.Control size="sm" type="text" placeholder="Small text" className={"medicalID"}/>
@@ -142,6 +150,7 @@ class AppSixteen extends React.Component{
         label={"Yes"}
         name={"DoHaveProof"}
         className={"formRadio"}
+        onClick={this.toggleRadio.bind(this,"radioYes")}
         />
         <Form.Check 
         type={"radio"}
@@ -149,8 +158,10 @@ class AppSixteen extends React.Component{
         label={"No"}
         name={"DoHaveProof"}
         className={"formRadio"}
+        onClick={this.toggleRadio.bind(this,"radioNo")}
         /></div>
         </Card.Subtitle>
+         { this.state.radioYes && <div>
         <Row className={"clearBoth"}>
         <Card.Subtitle className={"commonCardSubTitle_ _p0 _m0 noBorder f400"}>Please take a picture of your Medicaid card or Award Letter.</Card.Subtitle>
         </Row>
@@ -166,7 +177,8 @@ class AppSixteen extends React.Component{
         </Row>
         <Row xl={6}>
         </Row>
-        </Row>
+        </Row></div>}
+        </div>}
         <Card.Subtitle className={"commonCardSubTitleCheckbox _left"}>
         <Form.Check 
         type={"checkbox"}
