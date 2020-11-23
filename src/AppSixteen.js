@@ -115,6 +115,7 @@ class AppSixteen extends React.Component{
         </Modal.Footer>
       </Modal>
       <Card bsPrefix="middleNavWrapper familyMembersListTabs">
+        <div className={"scroolableOnOverflow"}>
         <Card.Title className={"titleMain"}>Brenda Williams</Card.Title>
         <Card.Subtitle className={"commonCardSubTitle_ _p0 _m0 parentGuardian noBorder"}>Parent/Guardian</Card.Subtitle>
         <Nav className={"nestedNav"}>
@@ -209,6 +210,7 @@ class AppSixteen extends React.Component{
         <FormControl id="inlineFormInputGroup" placeholder="" />
         </InputGroup>
       </Card.Subtitle>
+      </div>
       </Card>
       <div className="continueWrapper">
         <Row xl={12}>

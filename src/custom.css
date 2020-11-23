@@ -559,3 +559,7 @@ opacity: 1;
 .familyAdditionWrapper .middleNavWrapper.familyMembersListTabs{
     height:800px;
 }
+.scroolableOnOverflow{
+    overflow: auto;
+    height: 720px;
+}
