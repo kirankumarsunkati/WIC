@@ -9,6 +9,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import fotterLogo from './images/footer_logo.svg';
 import {Navbar,Nav,Row,Col,Card,Button,Form,Dropdown,ButtonGroup,DropdownButton} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
+import { createStore} from 'redux';
+import {connect} from 'react-redux';
+
 
 class AppFourteen extends React.Component{
   constructor(props) {
@@ -18,6 +21,8 @@ class AppFourteen extends React.Component{
   toggleSelect = () => {
     console.log('toggleSelect');
     this.setState({childrenSelect: !this.state.childrenSelect})
+    this.props.dispatch({type: "INCREMENT",payload:10});
+    
   }
   renderSelect = () => {
     return this.state.childrenSelect == true ? <div>
@@ -31,7 +36,15 @@ class AppFourteen extends React.Component{
     </select>
     </div> : " "
   }
+  componentWillReceiveProps (nextProps){
+    console.log(this.props,nextProps)
+  }
+  shouldComponentUpdate(nextProps,nextState){
+    console.log(this.props,nextProps)
+    return true
+  }
   render(){
+    console.log(this);
     return (
       <div className="App familyMembersWrapper">
       <Navbar bg="dark-new" variant="dark-new">
@@ -78,6 +91,7 @@ class AppFourteen extends React.Component{
       </Card>
       </Col>
       <Col xl={7} className={"middlePanel _p0 _m0 _rootp0m0"}>
+        {this.props.count}
       <Card bsPrefix="middleNavWrapper">
         <Card.Title className={"titleMain"}>We'll start by determining which members need to be added to the family.</Card.Title>
         <Card.Subtitle className={"commonCardSubTitle_ _p0 _m0"}>WIC benefits are for pregnent and postpartum mothers and children
@@ -168,5 +182,8 @@ class AppFourteen extends React.Component{
   }
 }
 
-export default AppFourteen;
+const mapStateToProps = state => ({
+  count : state.result
+})
+export default connect(mapStateToProps)(AppFourteen);
 

@@ -9,7 +9,9 @@ import callCenterLogo from './images/call_center.png';
 import {Navbar,Nav,Row,Col,Card,Button,Modal} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel'
 import FamilyMember from './FamilyMembers/FamilyMember';
+import { createStore} from 'redux';
 
+import {connect} from 'react-redux';
 
 
 class AppFifteen extends React.Component{
@@ -30,7 +32,15 @@ class AppFifteen extends React.Component{
    this.setState({
     flag: !this.state.flag
   });
+  this.props.dispatch({type: "INCREMENT"});
  }
+ componentWillReceiveProps (nextProps){
+  console.log(this.props,nextProps)
+}
+shouldComponentUpdate(nextProps,nextState){
+  console.log(this.props,nextProps)
+  return true
+}
   render(){
     console.log(this.state);
     return (
@@ -53,7 +63,7 @@ class AppFifteen extends React.Component{
       <Row>
       <Col xl={3} className={"_rootp0m0"}>
       <Card bsPrefix="leftNavWrapper">
-        <Card.Title className={"leftTitleMain"}>Welcome to WIC! </Card.Title>
+        <Card.Title className={"leftTitleMain"}>Welcome to WIC! {this.props.count}</Card.Title>
         <Card.Subtitle className={"commonCardSubTitle letsStarted"}>Let's get started.</Card.Subtitle>
         <Card.Subtitle className={"commonCardSubTitle_ active"}>Family questionnaire
         </Card.Subtitle>
@@ -170,5 +180,8 @@ class AppFifteen extends React.Component{
   }
 }
 
-export default AppFifteen;
+const mapStateToProps = state => ({
+  count : state.result
+})
+export default connect(mapStateToProps)(AppFifteen);
 
