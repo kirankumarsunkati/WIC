@@ -5,35 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore} from 'redux';
 import {Provider} from 'react-redux';
+import reducer from './reducer';
 // const initialState  = {
 //   count:40
 // }
 
-const initialState = {
-  result : 1,
-  lastValues: []
-}
-const reducer = (state = initialState,action) => { 
-  console.log(action.type);
-  switch(action.type){
-    case "INCREMENT":
-        state = {
-            ...state,
-            result:state.result+action.payload,
-            lastValues:[...state.lastValues,action.payload]
-        } 
-        break;
-  
-    case "DECREMENT":
-        state = {
-          ...state,
-            result:state.result-action.payload
-        }
-        break;
-  }
-  return state
 
-}
 
 const Store =  createStore(reducer);
 

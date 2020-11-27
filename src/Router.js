@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BrowserRouter as Router,
+  Link,
   Route
 } from "react-router-dom";
 import One from './One';
@@ -11,6 +12,7 @@ import Test from './Test'
 class Routeer extends React.Component{
     render(){
         return(
+          <div>
             <Router>
               <Route exact path="/1" component={One}>
               </Route>
@@ -24,7 +26,14 @@ class Routeer extends React.Component{
               </Route>
               <Route exact path="/16#" component={Test}>
               </Route>
+              <Link to={'1'}> One</Link>
+              <Link to={'14'}> AppFifteen</Link>
+              <Link to={'15'}> AppFourteen</Link>
+              <Link to={'16'}> 16</Link>
             </Router>
+            
+            <div>{this.props.children}</div>
+            </div>
         )
     }
 }

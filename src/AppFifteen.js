@@ -32,7 +32,7 @@ class AppFifteen extends React.Component{
    this.setState({
     flag: !this.state.flag
   });
-  this.props.dispatch({type: "INCREMENT"});
+  this.props.dispatch({type: "INCREMENT",payload:10});
  }
  componentWillReceiveProps (nextProps){
   console.log(this.props,nextProps)
