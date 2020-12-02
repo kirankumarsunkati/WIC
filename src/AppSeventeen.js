@@ -9,13 +9,40 @@ import appIcon from './images/app_icon.svg';
 import testimonialIcon from './images/testimonial@2x.png';
 import fotterLogo from './images/footer_logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Navbar,Nav,Row,Col,Image,Card,Button} from 'react-bootstrap';
+import {Navbar,Nav,Row,Col,Image,Card,Button,Overlay,Popover} from 'react-bootstrap';
 
 
 class AppSeventeen extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {flag:false};
+    this.myRef = React.createRef();
+  }
+  toggleSettings = () => {
+    console.log('a')
+    this.setState({flag:!this.state.flag});
+  }
     render(){
+      const {flag} = this.state;
+      console.log(flag,this.myRef.current);
         return(
             <div className="App familyMembersWrapper">
+              <Overlay
+                show={flag}
+                target={this.myRef.current}
+                placement="bottom"
+                container={this.myRef.current}
+                containerPadding={20}
+              >
+                <Popover id="popover-contained">
+                  <Popover.Title as="h3" className="title">Settings</Popover.Title>
+                  <Popover.Content>
+                    <Popover.Title className="Logout commonPop _left clearboth">Logout</Popover.Title>
+                    <Popover.Title className="Privacy commonPop _left clearboth">Privacy Policy</Popover.Title>
+                    <Popover.Title className="Terms commonPop _left clearboth">Terms & Conditions</Popover.Title>
+                  </Popover.Content>
+                </Popover>
+              </Overlay>
               <Navbar bg="dark-new" variant="dark-new">
                 <Navbar.Brand href="#home"><img
                 src={myWic}
@@ -44,13 +71,14 @@ class AppSeventeen extends React.Component{
                   </Col>
                   <Col xl={1} className="iconsWrapper">
                     <div className="bellIconWrapper">
-                      <svg width="2em" height="2em" viewBox="0 0 30 30" class="bi bi-bell" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                      <svg width="2em" height="2em" viewBox="0 0 30 30" className="bi bi-bell" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"/>
                         <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
                       </svg><span className="notificationCount">1</span>
                   </div>
-                  <div className="settingIconWrapper">
-                  <svg width="2em" height="2em" viewBox="0 0 30 30" class="bi bi-gear-fill" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                  
+                  <div className="settingIconWrapper" onClick={this.toggleSettings} ref={this.myRef}>
+                  <svg width="2em" height="2em" viewBox="0 0 30 30" className="bi bi-gear-fill" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"/>
                   </svg>
                   </div>
@@ -126,7 +154,7 @@ class AppSeventeen extends React.Component{
                           </Card>
                           <Card className="membersWrapper">
                             <Card.Title className={"membersWrapperOne tickIcon"}>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="#4DBD76" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-check-circle-fill" fill="#4DBD76" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                             </svg>
                             </Card.Title>
@@ -152,7 +180,7 @@ class AppSeventeen extends React.Component{
                           </Card>
                           <Card className="membersWrapper">
                             <Card.Title className={"membersWrapperOne tickIcon"}>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="#4DBD76" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-check-circle-fill" fill="#4DBD76" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                             </svg>
                             </Card.Title>
@@ -178,7 +206,7 @@ class AppSeventeen extends React.Component{
                           </Card>
                           <Card className="membersWrapper">
                             <Card.Title className={"membersWrapperOne tickIcon"}>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="#4DBD76" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-check-circle-fill" fill="#4DBD76" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                             </svg>
                             </Card.Title>
@@ -204,7 +232,7 @@ class AppSeventeen extends React.Component{
                           </Card>
                           <Card className="membersWrapper">
                             <Card.Title className={"membersWrapperOne tickIcon"}>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="#4DBD76" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-check-circle-fill" fill="#4DBD76" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                             </svg>
                             </Card.Title>

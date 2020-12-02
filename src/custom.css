@@ -860,3 +860,34 @@ opacity: 1;
     width: 45px;
     height: 45px;
 }
+#popover-contained{
+    width: 250px!important;
+    left: -35px!important;
+}
+#popover-contained .arrow{
+    left: 46px!important;
+}
+#popover-contained .title{
+    text-align: left;
+    font-size: 18px;
+    line-height:18px;
+    font-weight:bold;
+    letter-spacing: 0px;
+    color: #4A2E62;
+    opacity: 1;
+}
+.commonPop{
+    text-align: center;
+    font-size: 14px;
+    line-height: 35px;
+    letter-spacing: 0px;
+    color: #00799E;
+    opacity: 1;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.commonPop.Logout{
+    padding: 20px 0px 30px 10px;
+}
