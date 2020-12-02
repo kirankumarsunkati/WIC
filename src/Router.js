@@ -9,6 +9,7 @@ import AppFourteen from './AppFourteen';
 import AppFifteen from './AppFifteen';
 import AppSixteen from './AppSixteen';
 import Test from './Test'
+import AppSeventeen from "./AppSeventeen";
 class Routeer extends React.Component{
     render(){
         return(
@@ -22,18 +23,14 @@ class Routeer extends React.Component{
               </Route>
               <Route exact path="/16" component={AppSixteen}>
               </Route>
+              <Route exact path="/17" component={AppSeventeen}>
+              </Route>
               <Route exact path="/login" component={Test}>
               </Route>
               <Route exact path="/16#" component={Test}>
-              </Route>
-              <Link to={'1'}> One</Link>
-              <Link to={'14'}> AppFifteen</Link>
-              <Link to={'15'}> AppFourteen</Link>
-              <Link to={'16'}> 16</Link>
+              </Route>             
             </Router>
-            
-            <div>{this.props.children}</div>
-            </div>
+          </div>
         )
     }
 }

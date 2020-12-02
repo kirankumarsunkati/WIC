@@ -563,3 +563,300 @@ opacity: 1;
     overflow: auto;
     height: 720px;
 }
+#root .btn-primary.buttonSummary,#root .btn-primary.buttonSettings{
+    min-width: 84px;
+    min-height: 32px;
+    border-radius: 5px;
+    opacity: 1;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+#root .btn-primary.buttonSummary{
+    background: #604378 0% 0% no-repeat padding-box;
+}
+#root .btn-primary.buttonSettings{
+    position: relative;
+    top: 0px;
+    background: none;
+    margin: 0 10px;
+}
+.mywic{
+    margin-right: 40px;
+}
+.familyHeaderWrapper{
+    width: 40px;
+    height: 40px;
+    margin: 10px 0 10px 0;
+    float: left;
+}
+#root .familyWrapperTitle{
+    text-align: left;
+    font-size: 18px;
+    line-height: 49px;
+    font-family: bold;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    width: auto;
+    font-weight: bold;
+    position: relative;
+    top: 3px;
+    left: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.familyWrapperTopNav{
+    min-width: 120px;
+    min-height: 60px;
+    background: #30194B 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.familyWrapperTopNav .card{
+    background: none;
+}
+.bellIconWrapper{
+    width: 50px;
+    height: 26px;
+    background: #4A2E62 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 5px 0 5px 10px;
+    margin: 15px 5px 15px 0;
+    float: left;
+}
+.notificationCount{
+    position: relative;
+    color: #FFFFFF;
+    top: -38px;
+    left: 6px;
+}
+.settingIconWrapper{
+    width: 18px;
+    height: 18px;
+    opacity: 1;
+    position: relative;
+    float: left;
+    padding: 5px 0 5px 10px;
+    margin: 15px 0 15px 0;
+}
+#root .iconsWrapper{
+    padding: 0;
+}
+.threePartsGridWrapper .scheduleAppointmentWrapper{
+    background: #B95564 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    position: relative;
+    top: 12px;
+    margin: 10px 15px 20px 0;
+}
+.threePartsGridWrapper .BenefitsWrapper,.threePartsGridWrapper .scheduleAppointmentWrapper{
+    border: none;
+    background: none;
+}
+.threePartsGridWrapperOne{
+    margin: 20px 0;
+    height: 200px;
+    background: #B95564 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+}
+.BenefitsWrapperYellow.card{
+    background-color: none;
+}
+.BenefitsWrapperYellow{
+    min-height: 50px;
+    height: 110px;
+    background: #FFCE80 0% 0% no-repeat padding-box;
+    border-radius: 10px 10px;
+    opacity: 1;
+    background-color: #FFCE80!important;
+}
+
+.threePartsGridWrapperTwo,.threePartsGridWrapperThree{
+    padding: 40px 10px;
+}
+.threePartsGridWrapper{
+    min-width: 375px;
+    border-bottom: 1px solid #DADAE9;    
+}
+.plusIconCircle{
+    width: 40px!important;
+    height: 32px;
+    background: #30194B 0% 0% no-repeat padding-box;
+    border-radius: 90px;
+    opacity: 0.3;
+    font-size: 26px;
+    line-height: 10px;
+    left: 0;
+    position: relative!important;
+    padding: 8px 8px 4px 6px!important;
+}
+.plusIconHighlight{
+    background: #30194B 0% 0% no-repeat padding-box;
+}
+.scheduleAppointmentWrapper .scheduleAppointments{
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    position: relative;
+    letter-spacing: 0;
+    top: 2px;
+}
+.righIcon{
+    height: 14px;
+    opacity: 1;
+    color: #f4f4f4;
+    font-size: 26px;
+    width: 10px!important;
+    position: relative!important;
+    padding: 5px 0 0 0;
+    line-height: 16px;
+    left: -20px;
+    font-weight: bold;
+}
+.benefitsTextOne{
+    text-align: left;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.benefitsTextTwo{
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.row .appoitmentWrapperCallMap,.row .btn-primary:hover{
+    width: 72px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 90px;
+    opacity: 1;
+    margin: 2px 5px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: #00799E;
+    opacity: 1;
+    border: none;
+    font-weight: bold;
+}
+.threePartsGridWrapperTwo .HeaderLeft,.threePartsGridWrapperThree .HeaderLeft{
+    text-align: left;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: #00799E;
+    opacity: 1;
+    font-weight: bold;
+
+}
+.threePartsGridWrapperTwo .plusIconGrey{
+    color: #fff;
+}
+.tickIcon{
+    padding: 10px;
+}
+.membersWrapper .card,.membersWrapper.card{
+    border: none;
+    border-radius: 0;
+}
+.membersWrapperNameOne{
+    text-align: left;
+    font-size: 18px!important;
+    line-height: 8px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.membersWrapperNameTwo
+{
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #81629D;
+    opacity: 1;
+}
+.membersWrappeExpiresrOne{
+    text-align: right;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #716977;
+    opacity: 1;
+}
+#root .membersWrapper .row.eachRowFamilyMembers{
+    padding: 0px 0 15px 0;
+    border-bottom: 1px solid #DADAE9;
+    margin-top: 10px;
+}
+.familyHeaderWrapper.membersRounded{
+    margin: 0;
+}
+.eachRowFamilyMembers .card-title{
+    margin-bottom: 0;
+}
+.eachRowFamilyMembers .righIcon{
+    background: #fff 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #B2A8B8 ;
+    padding: 10px 0 0 30px;
+}
+#root .threePartsGridWrapperThree .row.eachRowFamilyMembers{
+    padding: 5px 0 25px 0;
+}
+.beginText{
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #00799E;
+    opacity: 1;
+    font-weight: bold;
+    padding: 2px 18px 0 20px!important;
+}
+.threePartsGridWrapperThree .eachRowFamilyMembers .righIcon{
+    padding: 0 0 0 30px;
+}
+.BenefitsWrapperYellow .card{
+    border: none;
+    background: none;
+}
+.BenefitsWrapperYellow .benefitsTextOne{
+    text-align: left;
+    font-size:  22px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: #30194B;
+    opacity: 1;
+    padding: 16px 0 10px 0;
+}
+.threeMembers{
+    text-align: left;
+    font-size: 16px;
+    line-height: 8px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.BenefitsWrapperYellow .righIcon{
+    color: #716977;
+}
+
+.familyMembersWrapper .commonImageLogo{
+    width: 45px;
+    height: 45px;
+}
